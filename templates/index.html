@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}TalentRank AI | Resume Screening{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <p class="eyebrow">Recruitment Intelligence System</p>
+        <h1>Rank resumes against a job description using NLP.</h1>
+        <p class="hero-text">
+            Upload PDF, TXT, or DOCX resumes, paste a job description, and receive an explainable candidate ranking report with similarity score, skill match, missing skills, and recruiter-ready recommendations.
+        </p>
+    </div>
+    <div class="metric-card">
+        <span class="metric">60%</span>
+        <p>Estimated manual screening time reduction for first-level resume filtering.</p>
+    </div>
+</section>
+
+<section class="panel">
+    <form action="{{ url_for('main.rank_resumes') }}" method="POST" enctype="multipart/form-data" class="form-grid">
+        <div class="form-group full-width">
+            <label for="job_description">Job Description</label>
+            <textarea id="job_description" name="job_description" rows="12" placeholder="Paste the job description here..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="resumes">Upload Resumes</label>
+            <input id="resumes" type="file" name="resumes" accept=".pdf,.txt,.docx" multiple required />
+            <small>Supported formats: PDF, TXT, DOCX</small>
+        </div>
+
+        <div class="form-group">
+            <label for="scoring_method">Scoring Strategy</label>
+            <select id="scoring_method" name="scoring_method">
+                <option value="hybrid" selected>Hybrid: TF-IDF + Skills + Experience</option>
+                <option value="tfidf">TF-IDF Similarity Only</option>
+                <option value="skills">Skill Match Only</option>
+            </select>
+            <small>Hybrid is recommended for recruiter-facing results.</small>
+        </div>
+
+        <button type="submit" class="primary-btn">Rank Candidates</button>
+    </form>
+</section>
+
+<section class="info-grid">
+    <div class="info-card">
+        <h3>1. Parse</h3>
+        <p>Extract text, email, phone, and candidate name from resumes.</p>
+    </div>
+    <div class="info-card">
+        <h3>2. Understand</h3>
+        <p>Identify key job skills and compare them with resume skills.</p>
+    </div>
+    <div class="info-card">
+        <h3>3. Rank</h3>
+        <p>Score candidates using NLP similarity and recruiter-friendly rules.</p>
+    </div>
+</section>
+{% endblock %}

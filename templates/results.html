@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Candidate Ranking Results{% endblock %}
+
+{% block content %}
+<section class="results-header">
+    <div>
+        <p class="eyebrow">Ranking Complete</p>
+        <h1>Candidate Shortlist Report</h1>
+        <p>Scoring strategy: <strong>{{ scoring_method|upper }}</strong> · Job skills detected: <strong>{{ job_skill_count }}</strong></p>
+    </div>
+    <a class="secondary-btn" href="{{ url_for('main.download_report', filename=report_filename) }}">Download CSV Report</a>
+</section>
+
+{% if failed_files %}
+<div class="alert warning">
+    Some files could not be parsed: {{ failed_files|join(', ') }}
+</div>
+{% endif %}
+
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Candidate</th>
+                <th>Final Score</th>
+                <th>TF-IDF</th>
+                <th>Skill Match</th>
+                <th>Experience</th>
+                <th>Recommendation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidate in candidates %}
+            <tr>
+                <td><span class="rank-badge">#{{ candidate.rank }}</span></td>
+                <td>
+                    <strong>{{ candidate.candidate_name }}</strong><br />
+                    <small>{{ candidate.email }} · {{ candidate.phone }}</small><br />
+                    <small>{{ candidate.filename }}</small>
+                </td>
+                <td><strong>{{ candidate.final_score }}%</strong></td>
+                <td>{{ candidate.tfidf_similarity }}%</td>
+                <td>{{ candidate.skill_match_score }}%</td>
+                <td>{{ candidate.experience_years }} yrs</td>
+                <td>{{ candidate.recommendation }}</td>
+            </tr>
+            <tr class="details-row">
+                <td></td>
+                <td colspan="6">
+                    <div class="skill-section">
+                        <div>
+                            <strong>Matched Skills</strong>
+                            <p>{{ candidate.matched_skills|join(', ') if candidate.matched_skills else 'No direct skill matches found.' }}</p>
+                        </div>
+                        <div>
+                            <strong>Missing Skills</strong>
+                            <p>{{ candidate.missing_skills|join(', ') if candidate.missing_skills else 'No critical missing skills detected.' }}</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<a class="back-link" href="{{ url_for('main.index') }}">← Run another screening</a>
+{% endblock %}

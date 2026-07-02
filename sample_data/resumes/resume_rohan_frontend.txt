@@ -1,0 +1,5 @@
+Rohan Mehta
+rohan.mehta@example.com
++91 90000 11111
+
+Frontend Developer with 5 years of experience in JavaScript, TypeScript, React, UI development, collaboration, and product design. Familiar with REST APIs and cloud deployment. Limited experience with Python or machine learning.

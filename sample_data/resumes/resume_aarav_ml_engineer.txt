@@ -1,0 +1,5 @@
+Aarav Sharma
+aarav.sharma@example.com
++91 98765 43210
+
+AI/ML Engineer with 4 years of experience building machine learning and NLP solutions. Skilled in Python, SQL, pandas, numpy, scikit-learn, logistic regression, random forest, XGBoost, TF-IDF, embeddings, Flask, FastAPI, Docker, AWS, and dashboards. Built data pipelines and deployed ML APIs for business stakeholders.

@@ -1,0 +1,16 @@
+flowchart TD
+    A[Start] --> B[Upload resumes]
+    B --> C[Paste job description]
+    C --> D[Extract text from PDF/TXT/DOCX]
+    D --> E[Clean text and remove noise]
+    E --> F[Extract required JD skills]
+    E --> G[Extract resume skills]
+    F --> H[Calculate skill overlap]
+    G --> H
+    E --> I[Create TF-IDF vectors]
+    I --> J[Calculate cosine similarity]
+    H --> K[Combine TF-IDF + Skill + Experience]
+    J --> K
+    K --> L[Sort candidates by final score]
+    L --> M[Generate shortlist and CSV report]
+    M --> N[End]

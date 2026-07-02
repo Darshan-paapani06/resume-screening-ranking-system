@@ -1,0 +1,87 @@
+{
+  "Programming Languages": [
+    "python",
+    "sql",
+    "java",
+    "javascript",
+    "typescript",
+    "c++",
+    "c#",
+    "r",
+    "scala"
+  ],
+  "Machine Learning": [
+    "machine learning",
+    "deep learning",
+    "classification",
+    "regression",
+    "clustering",
+    "xgboost",
+    "random forest",
+    "logistic regression",
+    "scikit-learn",
+    "sklearn",
+    "tensorflow",
+    "pytorch"
+  ],
+  "NLP": [
+    "nlp",
+    "natural language processing",
+    "spacy",
+    "nltk",
+    "transformers",
+    "bert",
+    "tf-idf",
+    "embeddings",
+    "text classification",
+    "named entity recognition"
+  ],
+  "Data Engineering": [
+    "pandas",
+    "numpy",
+    "spark",
+    "hadoop",
+    "etl",
+    "airflow",
+    "data pipeline",
+    "data cleaning"
+  ],
+  "Cloud & MLOps": [
+    "docker",
+    "kubernetes",
+    "aws",
+    "azure",
+    "gcp",
+    "mlflow",
+    "fastapi",
+    "flask",
+    "streamlit",
+    "ci/cd",
+    "github actions"
+  ],
+  "Databases": [
+    "mysql",
+    "postgresql",
+    "mongodb",
+    "redis",
+    "snowflake",
+    "bigquery"
+  ],
+  "Analytics": [
+    "power bi",
+    "tableau",
+    "excel",
+    "statistics",
+    "a/b testing",
+    "dashboard",
+    "visualization"
+  ],
+  "Soft Skills": [
+    "communication",
+    "leadership",
+    "stakeholder",
+    "problem solving",
+    "collaboration",
+    "teamwork"
+  ]
+}

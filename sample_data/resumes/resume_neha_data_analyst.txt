@@ -1,0 +1,5 @@
+Neha Rao
+neha.rao@example.com
++91 91234 56789
+
+Data Analyst with 3 years of experience in SQL, Excel, Tableau, Power BI, dashboard development, statistics, data cleaning, and stakeholder communication. Basic exposure to Python and pandas. Interested in machine learning and NLP projects.

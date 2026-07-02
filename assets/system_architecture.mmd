@@ -1,0 +1,16 @@
+flowchart LR
+    A[Recruiter / HR User] --> B[Flask Web Interface]
+    B --> C[Resume Upload Handler]
+    B --> D[Job Description Input]
+    C --> E[Resume Parser\nPDF / TXT / DOCX]
+    D --> F[NLP Preprocessing]
+    E --> F
+    F --> G[Skill Extraction Engine]
+    F --> H[TF-IDF Vectorizer]
+    G --> I[Skill Match Score]
+    H --> J[Cosine Similarity Score]
+    I --> K[Hybrid Ranking Engine]
+    J --> K
+    K --> L[Candidate Ranking Report]
+    L --> M[CSV Export]
+    L --> N[Recruiter Dashboard]

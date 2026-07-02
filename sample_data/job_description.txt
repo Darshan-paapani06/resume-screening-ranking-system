@@ -1,0 +1,3 @@
+AI/ML Engineer - Job Description
+
+We are looking for an AI/ML Engineer with strong Python, SQL, machine learning, NLP, and model deployment experience. The candidate should be comfortable with pandas, numpy, scikit-learn, TF-IDF, embeddings, Flask or FastAPI, Docker, and cloud deployment. Experience with dashboards, stakeholder communication, and data pipelines is preferred.
