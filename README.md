@@ -4,6 +4,8 @@
 ![Flask](https://img.shields.io/badge/Flask-Web%20App-black)
 ![NLP](https://img.shields.io/badge/NLP-TF--IDF%20%2B%20Skill%20Matching-green)
 ![Status](https://img.shields.io/badge/Status-Portfolio%20Ready-brightgreen)
+<img width="1365" height="631" alt="Screenshot 2026-07-02 105157" src="https://github.com/user-attachments/assets/1f2930b5-4257-4d8d-8b36-65f93acd28a1" />
+<img width="1365" height="634" alt="Screenshot 2026-07-02 105147" src="https://github.com/user-attachments/assets/fe114475-bff4-4e77-a6eb-9e15eda55b21" />
 
 **Author:** Darshan Paapani  
 **Project Level:** Intermediate  
